@@ -46,8 +46,6 @@ class Login extends Base {
         }
 
         //生成认证条件
-        $map = array();
-        // 支持使用绑定帐号登录
         $map['username'] = $username;
         $authInfo = \Org\Util\Rbac::authenticate($map);
         //使用用户名、密码和状态的方式进行认证
